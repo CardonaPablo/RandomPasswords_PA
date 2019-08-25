@@ -1,0 +1,74 @@
+Desarrollar un programa que genere passwords Random según el tamaño dado,
+el número de mayusculas que ingresara al password y el número de caracteres especiales que tendrá el password,
+además de encriptarlos y desencriptarlos vía codificación Cesar.
+
+class Password
+{ 
+  private int mPassSize;
+  private int mNumberOfMayus;
+  private int mNumberOfSpecChars;
+  public Password(int passSize, int numberOfMayus, int numberOfSpecChars)
+  {
+    mPassSize = passSize;
+    mNumberOfMayus = numberOfMayus;
+    mNumberOfSpecChars = numberOfSpecChars;
+  }
+  private string generatePassword(int numberOfPasswords)
+  public encryptPasswds(int interval)
+  public decryptPasswds(int interval)
+}
+
+
+La salida en consola será la siguiente:
+1. Mostrar en pantalla Cuantos passwords desea generar?
+2. Leer el numero de contaseñas y almecenarlo en numberOfPasswords
+3. Mostrar en pantalla De que tamaño será cada password?
+4. Leer el tamaño de la contraseña y almacenarlo en mPassSize
+  4.1 Si passSize es < 1
+    4.1.1 Limpiar la pantalla
+    4.1.2 Mostrar en pantalla el mensaje ("La longitud de la contraseña debe ser mayor a cero")
+    4.2.3 Pedir passSize hasta que se ingrese un valor válido
+5. Mostrar en pantalla "Cuántas mayúsculas debo poner en los passwords?"
+6. Leer el numero de mayusculas y almacenarlo en mNumberOfMayus
+  6.1 Si mNumberOfMayus > mPassSize
+    6.1.1 Limpiar la pantalla
+    6.1.2 Mostrar en pantalla el mensaje ("El numero de Mayúsculas no puede exceder a la longitud de la contraseña")
+    6.1.2 Pedir mNumberOfMayus hasta que se ingrese un valor válido
+7. Cuántos caracteres especiales debo poner en los passwords?
+8. Leer el numero de caraceteres especiales y almacenarlo en mNumberOfSpecChars;
+  8.1 Si mNumberOfSpecChar > mPassSize
+      8.1.1 Limpiar la pantalla
+      8.1.2 Mostrar en pantalla el mensaje ("El numero de Caracteres especiales no puede exceder a la longitud de la contraseña")
+      8.1.3 Pedir mNumberOfSpecChars hasta que se ingrese un valor válido
+  8.2 Si mNumberOfSpecChar + mNumberOfMayus > mPassSize
+      8.2.2 Mostrar en pantalla el mensaje ("La suma del numero de Caracteres especiales y el número de Mayusculas no puede exceder a la longitud de la contraseña")
+      8.2.3 Pedir mNumberOfSpecChars hasta que se ingrese un valor válido
+9. Imprime el N número de passwords
+10.Imprime el N número de passwords encriptados
+11.Imprime el N número de passwords desencriptados
+
+Cómo generar una contraseña aleatoria?
+Podemos hacer un algoritmo que tenga 3 arreglos diferentes
+normalChars[abcdefghijklmnopqrstuvwxyz0123456789]
+capsLetters[ABCDEFGHIJKLMNOPQRSTUVWXYZ]
+specialChars[!"#$%&'()*+,-./:;=?@] 
+Generar un numero aleatorio del 1 al 3 (arraySelect), mNumberOfChars veces, 
+pero solo aumentando el contador si se agrega al string currentPassword
+Si el numero es n, tomar un caracter del nesimo arreglo
+Realizando varias validaciones utilizando los atributos mNumberOfChars, mNumberOfMayus y mNumberOfSpecChars
+  Si mNumberOfMayus == 0 y mNumberOfSpecChars == 0, generar el password solo con el arreglo normalChars( arraySelect siempre es 1)
+  Si mNumberOfMayus == 0 y mNumberOfSpecChars > 0, arraySelect es 1 y 3
+  Si mNumberOfMayus > 0 y mNumberOfSpecChars == 0, arraySelect es 1 y 2
+  Si mNumberOfMayus > 0 y mNumberOfSpecChars > 0, arraySelect es 1, 2 y 3
+Se asigna contChars = mNumberOfChars, contMayus = mNumberOfMayus y contSpec = mNumberOfSpecChars
+Agregar un contador de caracteres normales para asegurarnos de que el numero de caracteres especiales y mayusculas sea el especificado
+contNormAL = mPassSize - mNumberOfChars - mNumberofMayus;
+Si se selecciona uno de los arreglos se comprueba que su contador > 0
+Si se cumple esta condicion se genera una letra aleatoria del arreglo, se agrega al string currentPasword
+y despues se decrece contChars y contMayus o contSpec
+
+
+Como asegurarse que esa contraseña aleatoria no se repita?
+
+
+  
