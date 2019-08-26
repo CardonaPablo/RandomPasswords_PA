@@ -68,7 +68,14 @@ Si se cumple esta condicion se genera una letra aleatoria del arreglo, se agrega
 y despues se decrece contChars y contMayus o contSpec
 
 
-Como asegurarse que esa contraseña aleatoria no se repita?
+Algoritmo de Encriptación
+
+Leer el string genPassword
+Por cada elemento en el string genPassword
+  Convertirlo a su equivalente ASCII
+  Sumarle la cantidad interval
+  Convertirlo a char y regresarlo a su posicion en el string
+
 
 
   
